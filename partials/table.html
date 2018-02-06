@@ -1,0 +1,36 @@
+<div style="padding: 10px;border: 1px solid black;">
+
+
+    <div class="form-group">
+      <input type="text" class="form-control" ng-model="query.name" placeholder="Search by Name" autofocus>
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" ng-model="query.gender" placeholder="Search by Gender" autofocus>
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" ng-model="query.birth_year" placeholder="Search by Birth Year" autofocus>
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" ng-model="query" placeholder="Search by Film Title" autofocus>
+    </div>
+
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Birth Year</th>
+        <th>Films Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="people in peopleList | filter: query">
+        <th scope="row">{{people.name}}</th>
+        <td>{{people.gender}}</td>
+        <td>{{people.birth_year}}</td>
+        <td ng-repeat="film in people.filmList">{{film}}</td>
+      </tr>
+     </tbody>
+   </table>
+</div>

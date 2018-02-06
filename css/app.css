@@ -1,0 +1,11 @@
+.modal-content {
+  padding: 10px;
+}
+
+.right {
+  float: right !important;
+}
+
+.form-control {
+  width: 40%;
+}
